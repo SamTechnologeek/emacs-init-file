@@ -26,3 +26,20 @@
 
 ; map it to a key binding
 (global-set-key (kbd "C-c d") 'insert-date)
+
+; the scrolling on emacs drives me crazy, it jumps and all of a sudden
+; you don't even know where you are. lets change that.
+(setq scroll-step 1)
+(setq scroll-conservatively 10000)
+(setq auto-window-vscroll nil)
+
+; color theme loading.
+; remember to add the load path
+(add-to-list 'load-path "~/.emacs.d/color-theme/")
+(add-to-list 'load-path "~/.emacs.d/color-theme/themes/")
+(require 'color-theme)
+(color-theme-initialize)
+(load-library "color-theme")
+
+; load zenburn color theme
+(load-theme 'zenburn)
