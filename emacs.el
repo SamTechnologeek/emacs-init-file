@@ -14,3 +14,15 @@
 
 ; this is to display columns as well, not only lines
 (setq column-number-mode t)
+
+; set the emacs locale to standard, and not to whatever my system locale is
+(setq system-time-locale "C")
+
+; insert the date in a buffer
+(defun insert-date ()
+  "Inserts standard date time string."
+  (interactive)
+  (insert (format-time-string "%c")))
+
+; map it to a key binding
+(global-set-key (kbd "C-c d") 'insert-date)
