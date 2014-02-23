@@ -1,3 +1,7 @@
+; some fun when IDLE
+(require 'zone)
+(zone-when-idle 120)
+
 ; how annoying are gnu brats' indentation?
 (setq c-default-style "linux")
 (setq cpp-default-style "linux")
@@ -7,3 +11,6 @@
 
 ; hippies rock expansions by a great margin.
 (global-set-key	(kbd "M-_") 'hippie-expand)
+
+; this is to display columns as well, not only lines
+(setq column-number-mode t)
